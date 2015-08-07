@@ -70,7 +70,7 @@ body {
   background: #ffffff;
   opacity: .5;
 }
-/*#cssmenu ul li a:before {
+#cssmenu ul li a:before {
   content: "";
   display: block;
   position: absolute;
@@ -84,7 +84,7 @@ body {
   -ms-transition: width .25s;
   -o-transition: width .25s;
   transition: width .25s;
-}*/
+}
 #cssmenu ul li.last > a:after,
 #cssmenu ul li:last-child > a:after {
   display: none;
