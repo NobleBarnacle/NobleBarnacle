@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <head>
+  <meta charset="utf-8" />
+  <title>MIMO</title>
+  <!-- some stylesheet -->
+  <script src="/resources/angular.min.js"></script>
+  <script src="/resources/angular-route.js"></script>
+  <script src="/resources/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="modelStyles.css">
 </head>
-<body>
-  <h1>Hello Mack<h1>
+<body ng-app='mimo'>
+  <!-- <h1>Hello</h1> -->
+  <!-- <div ng-app='mimo'></div> -->
+
+  <div id='cssmenu'>
+  <ul>
+     <li class='active'><a href='#/home'><span>Model</span></a></li>
+     <li><a href='#/expenses'><span>Expenses</span></a></li>
+     <li><a href='#/general'><span>G&A</span></a></li>
+     <li><a href='#/employee'><span>Employee</span></a></li>
+     <li><a href='#/equity'><span>Debt & Equity</span></a></li>
+     <li class='last'><a href='#/revenue'><span>Revenue</span></a></li>
+  </ul>
+  </div>
+
+  <div ng-view></div>
+  <script src="/app/mimoAngularConfig.js"></script>
+  <script src="/app/model/model.js"></script>
+  <script src="/app/employee/employee.js"></script>
+  <script src="/app/expenses/expenses.js"></script>
+  <script src="/app/debtAndEquity/debtAndEquity.js"></script>
+  <script src="/app/general/general.js"></script>
+  <script src="/app/revenue/revenue.js"></script>
+
+
+
 </body>

@@ -1,0 +1,25 @@
+{
+  "name": "noblebarnacle",
+  "version": "1.0.0",
+  "description": "[![Stories in Ready](https://badge.waffle.io/NobleBarnacle/NobleBarnacle.png?label=ready&title=Ready)](https://waffle.io/NobleBarnacle/NobleBarnacle) # Noble Barnacle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimtom2713/NobleBarnacle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimtom2713/NobleBarnacle/issues"
+  },
+  "homepage": "https://github.com/jimtom2713/NobleBarnacle#readme",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "q": "^1.4.1",
+    "request": "^2.60.0"
+  }
+}
