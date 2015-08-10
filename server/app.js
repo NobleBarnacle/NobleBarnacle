@@ -1,12 +1,16 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var modelHandler = require('./modelHandler.js');
+var db = require('./db/mongoSchema.js');
+var defaultInstantiator = require('./db/models/defaultInstantiator.js');
 
 var app = express();
 // app.set('views', __dirname + '/views');
 app.use(express.static('../client'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
+defaultInstantiator.instantiateDefaultModel('mack');
 
 var server = app.listen(3000, function () {
   var host = server.address().address;
@@ -23,33 +27,11 @@ app.get('/model', function (req, res) {
   modelHandler.getModel(req, res);
 });
 
-app.get('/expenses', function (req, res) {
-  //get all expenses from database
-  modelHandler.getExpenses(req, res);
-});
-
-app.get('/general', function (req, res) {
-  //get all general's from database
-  modelHandler.getGenerals(req, res);
-});
-
 //routes from client
 //get main page ('/')
 // GET
   //Model
-    //('/model/modelid') => get model by id
-  // Expenses
-    // ('/expenses') => get all expenses
-    // ('/expenses/employees') => get all employees
-    // ('/expenses/employees/employeeId') => get employee by id
-    // ('/expenses/ganda') => get all g&A expenses
-    // ('expenses/ganda/itemid') => get g&A expense by id
-    // ('/expenses/startupCosts') => get all startup startupCosts
-  //Debt and Equity
-    // ('/debtandequity') => get all debt and equity
-  //Products
-    // ('/products') => get all products
-    // ('/products/productId') => get product by id
+    //('/model') => get model by id
 
 // POST
   //Expenses
